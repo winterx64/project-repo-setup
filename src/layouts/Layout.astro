@@ -88,7 +88,7 @@ const { title = "winterx64 - maker · dev · hardware" } = Astro.props;
         }
       });
 
-      // Loading animation for sections
+      // Smooth reveal animation for elements
       const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
@@ -97,25 +97,35 @@ const { title = "winterx64 - maker · dev · hardware" } = Astro.props;
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("loading");
+            entry.target.classList.add("active");
+            // Optional: stop observing once revealed
+            // observer.unobserve(entry.target); 
           }
         });
       }, observerOptions);
 
-      // Observe all sections for loading animation
-      document.querySelectorAll("section").forEach((section) => {
-        observer.observe(section);
+      // Observe all elements with reveal-up class
+      document.querySelectorAll(".reveal-up").forEach((el) => {
+        observer.observe(el);
       });
 
-      // Desktop card tilt effect
+      // Desktop card tilt & spotlight effect
       function initCardTilt() {
         if (window.innerWidth > 768) {
           document.querySelectorAll(".card-tilt").forEach((element) => {
             const card = element as HTMLElement;
             card.addEventListener("mousemove", (e: MouseEvent) => {
               const rect = card.getBoundingClientRect();
-              const x = (e.clientX - rect.left) / rect.width - 0.5;
-              const y = (e.clientY - rect.top) / rect.height - 0.5;
+              
+              // Spotlight coordinates
+              const mouseX = e.clientX - rect.left;
+              const mouseY = e.clientY - rect.top;
+              card.style.setProperty('--mouse-x', `${mouseX}px`);
+              card.style.setProperty('--mouse-y', `${mouseY}px`);
+
+              // Tilt calculations
+              const x = (mouseX) / rect.width - 0.5;
+              const y = (mouseY) / rect.height - 0.5;
 
               const rotateY = x * 8;
               const rotateX = -y * 8;
@@ -131,6 +141,7 @@ const { title = "winterx64 - maker · dev · hardware" } = Astro.props;
 
             card.addEventListener("mouseleave", () => {
               card.style.transform = "";
+              card.style.setProperty('--mouse-x', `-1000px`); // hide spotlight
             });
           });
         }
