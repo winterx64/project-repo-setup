@@ -1,0 +1,15 @@
+---
+---
+
+<footer class="max-w-6xl mx-auto px-6 md:px-8 py-12 text-center">
+    <p class="text-tertiary text-sm">
+        © <span id="year"></span> winterx64. Built with ❤️
+    </p>
+</footer>
+
+<script>
+    const yearSpan = document.getElementById("year");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear().toString();
+    }
+</script>

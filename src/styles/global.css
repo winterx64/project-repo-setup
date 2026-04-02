@@ -1,3 +1,14 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --color-neon: #00f7ff;
+    --color-neon2: #a855f7;
+    --font-monoHead: "Share Tech Mono", "ui-monospace", "SFMono-Regular";
+    --font-body: "Inter", "sans-serif";
+}
+
 /* Root variables for consistent theming */
 :root {
     --bg-primary: #f8fafc;
