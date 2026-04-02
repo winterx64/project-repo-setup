@@ -1,0 +1,169 @@
+<section
+  id="home"
+  class="max-w-6xl mx-auto px-6 md:px-8 lg:px-0 min-h-[75vh] flex items-center"
+>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
+    <!-- Left: Intro -->
+    <div class="space-y-8 reveal-up">
+      <div class="text-lg text-neon2 font-medium tracking-wide">Hello, I'm</div>
+      <h1
+        class="text-4xl md:text-6xl font-extrabold leading-tight font-monoHead"
+      >
+        winterx64
+        <span
+          class="block text-base md:text-xl font-semibold text-gray-400 mt-2"
+        >
+          Akhil B Xavier
+        </span>
+      </h1>
+
+      <div class="flex items-center gap-3 text-xl md:text-2xl">
+        <div id="type-roles" class="font-medium text-primary">
+          Backend Developer
+        </div>
+      </div>
+
+      <p class="text-secondary max-w-xl text-lg leading-relaxed text-sm">
+        I design and build web apps and IoT systems, from experimental embedded
+        builds to polished web products. I ship pragmatic solutions and love
+        turning ideas into working prototypes.
+      </p>
+
+      <div class="flex items-center gap-4 mt-8 reveal-up delay-200">
+        <a
+          href="#projects"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg btn-primary"
+        >
+          View My Work
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a
+          href="#contact"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg btn-secondary"
+        >
+          Download Resume
+        </a>
+      </div>
+
+      <div class="flex items-center gap-6 text-sm pt-4 reveal-up delay-300">
+        <a
+          href="https://github.com/winterx64"
+          target="_blank"
+          class="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
+        >
+          <i class="fa-brands fa-github text-base"></i>
+          <span>github.com/winterx64</span>
+        </a>
+        <a
+          href="https://linkedin.com/in/winterx64"
+          target="_blank"
+          class="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
+        >
+          <i class="fa-brands fa-linkedin text-base"></i>
+          <span>linkedin</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: Profile Card -->
+    <div class="relative reveal-up delay-100">
+      <div class="card-tilt p-8 rounded-2xl glass">
+        <div class="flex items-center gap-4 mb-6">
+          <div
+            class="w-20 h-20 rounded-xl bg-gradient-to-br from-neon to-neon2 flex items-center justify-center text-black font-bold text-xl"
+          >
+            <img
+              src="/assets/winter1x1.jpg"
+              alt="Akhil B Xavier"
+              class="w-full h-full rounded-xl object-cover"
+            />
+          </div>
+          <div>
+            <h3 class="font-semibold text text-primary">Akhil B Xavier</h3>
+            <p class="text-xs text-tertiary">
+              Backend Dev · Embedded Systems · Design
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-6">
+          <div class="p-4 rounded-xl bg-white/5">
+            <div class="text-xs text-tertiary mb-1">Experience</div>
+            <div class="font-bold text-xl text-primary">3+ yrs</div>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5">
+            <div class="text-xs text-tertiary mb-1">Projects</div>
+            <div class="font-bold text-xl text-primary">12+</div>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5">
+            <div class="text-xs text-tertiary mb-1">Certs</div>
+            <div class="font-bold text-xl text-primary">4</div>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5">
+            <div class="text-xs text-tertiary mb-1">Open Source</div>
+            <div class="font-bold text-xl text-primary">6 repos</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-sm text-tertiary mb-3">Quick Links</div>
+          <div class="flex gap-3">
+            <a
+              href="https://dropanote.onrender.com/"
+              target="_blank"
+              class="px-4 py-2 rounded-lg bg-white/10 text-primary text-sm hover:bg-white/15 transition-colors"
+            >
+              DropaNote
+            </a>
+            <a
+              href="https://marketplace.visualstudio.com/items?itemName=winterx64.winteriscoding"
+              target="_blank"
+              class="px-4 py-2 rounded-lg bg-white/10 text-primary text-sm hover:bg-white/15 transition-colors"
+            >
+              VSCode Theme
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="absolute -right-8 -bottom-8 w-40 h-40 rounded-full bg-gradient-to-br from-neon/20 to-neon2/10 blur-3xl"
+      >
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Role rotation animation
+  const roles = [
+    "Backend Developer",
+    "Hardware Enthusiast",
+    "IoT Innovator",
+    "Open Source Contributor",
+    "UI/UX Designer",
+  ];
+
+  let roleIndex = 0;
+  const roleElement = document.getElementById("type-roles");
+
+  function rotateRole() {
+    if (!roleElement) return;
+    roleElement.style.opacity = "0";
+    roleElement.style.transform = "translateY(10px)";
+
+    setTimeout(() => {
+      roleIndex = (roleIndex + 1) % roles.length;
+      roleElement.textContent = roles[roleIndex];
+      roleElement.style.opacity = "1";
+      roleElement.style.transform = "translateY(0)";
+    }, 150);
+  }
+
+  if (roleElement) {
+    // Add transition styles
+    roleElement.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+    // Start rotation
+    setInterval(rotateRole, 3000);
+  }
+</script>
