@@ -1,33 +1,44 @@
-# Astro Starter Kit: Minimal
+# winterx64 · Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Welcome to the source code for my personal portfolio! This site serves as a central hub for my projects, experience, and contact information. As a Full Stack Developer & Hardware Enthusiast, I created this space to showcase my work across web development, IoT, and embedded systems.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Portfolio Preview](./public/assets/favicon.png) <!-- Update with a real screenshot path if you have one! -->
 
-## 🚀 Project Structure
+## ✨ Features
+- **Modern & Fast:** Built entirely with Astro for near-zero JavaScript overhead.
+- **Responsive Design:** Beautiful and usable on devices of all sizes.
+- **Dynamic Interactions:** Smooth micro-animations and glassy UI elements.
+- **Dark/Light Mode:** First-class support for both themes, respecting system preferences and saving user choices locally.
+- **High Performance:** Optimized for fast page loads and seamless scrolling navigation.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🛠 Tech Stack
+- [Astro](https://astro.build/) - Framework for performant UI
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first styling
+- Vanilla JavaScript - Lightweight interactivity
+- FontAwesome - Scalable icons
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🚀 Running Locally
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Want to explore the code or run it locally? Follow these steps:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/winterx64/winterx64.github.io.git
+   cd winterx64.github.io
+   ```
 
-Any static assets, like images, can be placed in the `public/` directory.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-## 🧞 Commands
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   > The site will run at `http://localhost:4321`.
 
-All commands are run from the root of the project, from a terminal:
+## 📦 Build Commands
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
@@ -35,9 +46,12 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 🤝 Connect
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **GitHub:** [@winterx64](https://github.com/winterx64)
+- **LinkedIn:** [Akhil B Xavier](https://linkedin.com/in/winterx64)
+- **Email:** winterx64.work@gmail.com
+
+---
+*Designed & Developed by [winterx64](https://github.com/winterx64)*
