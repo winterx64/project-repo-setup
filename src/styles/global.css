@@ -187,19 +187,10 @@ nav {
 .mobile-menu-backdrop {
   backdrop-filter: blur(8px);
   background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
 }
 
-.mobile-menu {
-  background: var(--bg-secondary);
-  backdrop-filter: blur(20px);
-  border-left: 1px solid var(--border-color);
-  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  max-height: 100vh;
-  overflow: hidden;
-}
+
 
 .mobile-nav-item {
   position: relative;
@@ -360,46 +351,54 @@ html {
   transition-delay: 500ms;
 }
 
-/* Slide in animation for mobile menu */
+/* Slide in and Fade animations for mobile menu */
 .slide-in {
-  animation: slideIn 0.3s ease-out forwards;
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .slide-out {
-  animation: slideOut 0.3s ease-out forwards;
+  animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes slideIn {
+@keyframes slideUp {
   from {
-    transform: translateX(100%);
+    transform: translateY(100%);
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
-@keyframes slideOut {
+@keyframes slideDown {
   from {
-    transform: translateX(0);
+    transform: translateY(0);
   }
   to {
-    transform: translateX(100%);
+    transform: translateY(100%);
   }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 /* Responsive improvements */
 @media (max-width: 768px) {
   .card-tilt:hover {
     transform: none;
-  }
-
-  .mobile-menu {
-    width: 300px;
-  }
-}
-
-@media (max-width: 480px) {
-  .mobile-menu {
-    width: 100vw;
   }
 }
