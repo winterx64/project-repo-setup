@@ -1,0 +1,280 @@
+<!-- NAVBAR -->
+<header class="fixed top-4 md:top-8 left-0 right-0 z-30 px-3 md:px-10 transition-all duration-300">
+  <nav
+    class="max-w-6xl mx-auto flex items-center justify-between p-2 pl-3 md:p-3 rounded-2xl glass border border-white/5 dark:border-white/10 shadow-lg shadow-black/5 dark:shadow-black/20"
+  >
+    <a href="#home" class="flex items-center gap-3 group">
+      <div
+        class="w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br from-neon to-neon2 text-black font-bold transition-transform group-hover:scale-105 shadow-md shadow-neon/20"
+      >
+        AK
+      </div>
+      <div class="hidden sm:block">
+        <div class="text-sm font-semibold text-primary">winterx64</div>
+        <div class="text-[11px] text-tertiary">maker · dev · hardware</div>
+      </div>
+    </a>
+
+    <div class="hidden md:flex items-center gap-6">
+      <a href="#about" class="nav-link text-sm font-medium">About</a>
+      <a href="#projects" class="nav-link text-sm font-medium">Projects</a>
+      <a href="#experience" class="nav-link text-sm font-medium">Experience</a>
+      <a href="#contact" class="nav-link text-sm font-medium">Contact</a>
+    </div>
+
+    <div class="flex items-center gap-2 pr-1 md:pr-0">
+      <a
+        href="#contact"
+        class="hidden sm:inline-block text-sm px-5 py-2 rounded-xl btn-secondary font-medium"
+      >
+        Resume
+      </a>
+      <button
+        id="themeToggle"
+        class="w-10 h-10 rounded-xl flex items-center justify-center hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+      >
+        <i id="themeIcon" class="fa-solid fa-moon text-sm text-secondary"></i>
+      </button>
+      <button
+        id="mobileBtn"
+        class="md:hidden w-10 h-10 rounded-xl flex items-center justify-center hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
+      >
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Enhanced Mobile Menu -->
+<div id="mobileMenu" class="fixed inset-0 z-50 hidden flex-col justify-end pointer-events-none">
+  <div class="mobile-menu-backdrop absolute inset-0 pointer-events-auto"></div>
+  <div class="mobile-menu relative w-full pointer-events-auto flex flex-col mt-auto bg-white/90 dark:bg-[#0a0b11]/90 backdrop-blur-2xl rounded-t-3xl border-t border-black/10 dark:border-white/10 shadow-[0_-10px_40px_rgba(0,0,0,0.1)] overflow-hidden max-h-[90vh]">
+    <!-- Mobile Menu Header with Pull Indicator -->
+    <div class="w-full flex justify-center pt-4 pb-2 z-10 absolute top-0">
+      <div class="w-12 h-1.5 rounded-full bg-black/10 dark:bg-white/10"></div>
+    </div>
+
+    <div class="mobile-menu-header pt-10 pb-4 px-6 relative z-10">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-3">
+          <img
+            src="/assets/winter1x1.jpg"
+            alt="winter_x64"
+            class="w-10 h-10 rounded-full object-cover shadow-md"
+          />
+          <div>
+            <div class="text-sm font-semibold text-primary">winter_x64</div>
+            <div class="text-[11px] text-tertiary">maker · dev · hardware</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-3 gap-3 text-center">
+        <div class="p-3 rounded-2xl bg-black/5 dark:bg-white/5 ring-1 ring-black/5 dark:ring-white/5">
+          <div class="text-lg font-bold text-primary">3+</div>
+          <div class="text-[10px] uppercase font-bold text-tertiary mt-1">Years</div>
+        </div>
+        <div class="p-3 rounded-2xl bg-black/5 dark:bg-white/5 ring-1 ring-black/5 dark:ring-white/5">
+          <div class="text-lg font-bold text-primary">12+</div>
+          <div class="text-[10px] uppercase font-bold text-tertiary mt-1">Projects</div>
+        </div>
+        <div class="p-3 rounded-2xl bg-black/5 dark:bg-white/5 ring-1 ring-black/5 dark:ring-white/5">
+          <div class="text-lg font-bold text-primary">4</div>
+          <div class="text-[10px] uppercase font-bold text-tertiary mt-1">Certs</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="flex-1 overflow-y-auto pb-6 px-4">
+      <div class="py-2">
+        <div
+          class="text-[10px] font-bold text-tertiary uppercase tracking-wider mb-3 px-2"
+        >
+          Navigation
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <a href="#home" class="mobile-nav-item">
+            <div class="mobile-nav-icon"><i class="fa-solid fa-home"></i></div>
+            <div class="font-medium text-primary text-sm mt-2">Home</div>
+          </a>
+          <a href="#about" class="mobile-nav-item">
+            <div class="mobile-nav-icon"><i class="fa-solid fa-user"></i></div>
+            <div class="font-medium text-primary text-sm mt-2">About</div>
+          </a>
+          <a href="#projects" class="mobile-nav-item">
+            <div class="mobile-nav-icon"><i class="fa-solid fa-code"></i></div>
+            <div class="font-medium text-primary text-sm mt-2">Projects</div>
+          </a>
+          <a href="#experience" class="mobile-nav-item">
+            <div class="mobile-nav-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <div class="font-medium text-primary text-sm mt-2">Experience</div>
+          </a>
+        </div>
+        <a href="#contact" class="mobile-nav-item !w-full flex-row items-center gap-4 mt-2">
+          <div class="mobile-nav-icon shrink-0"><i class="fa-solid fa-envelope"></i></div>
+          <div class="font-medium text-primary text-sm">Contact Me</div>
+          <i class="fa-solid fa-chevron-right ml-auto text-[10px] text-tertiary"></i>
+        </a>
+      </div>
+
+      <!-- Social Links -->
+      <div class="py-4 mt-2 border-t border-black/5 dark:border-white/10">
+        <div
+          class="text-[10px] font-bold text-tertiary uppercase tracking-wider mb-3 px-2"
+        >
+          Quick Connect
+        </div>
+        <div class="flex gap-2">
+          <a href="mailto:winterx64.work@gmail.com" class="flex-1 py-3.5 rounded-2xl bg-black/5 dark:bg-white/5 flex justify-center items-center text-secondary hover:text-primary hover:bg-black/10 dark:hover:bg-white/10 transition-colors ring-1 ring-black/5 dark:ring-white/5">
+            <i class="fa-solid fa-envelope text-lg"></i>
+          </a>
+          <a
+            href="https://github.com/winterx64"
+            target="_blank"
+            class="flex-1 py-3.5 rounded-2xl bg-black/5 dark:bg-white/5 flex justify-center items-center text-secondary hover:text-primary hover:bg-black/10 dark:hover:bg-white/10 transition-colors ring-1 ring-black/5 dark:ring-white/5"
+          >
+            <i class="fa-brands fa-github text-lg"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/winterx64"
+            target="_blank"
+            class="flex-1 py-3.5 rounded-2xl bg-black/5 dark:bg-white/5 flex justify-center items-center text-secondary hover:text-primary hover:bg-black/10 dark:hover:bg-white/10 transition-colors ring-1 ring-black/5 dark:ring-white/5"
+          >
+            <i class="fa-brands fa-linkedin text-lg"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<script>
+  // Theme toggle functionality
+  function updateThemeIcon() {
+    const themeIcon = document.getElementById("themeIcon");
+    if (!themeIcon) return;
+    const isDark = document.documentElement.classList.contains("dark");
+    themeIcon.className = `fa-solid fa-${isDark ? "sun" : "moon"} text-sm text-secondary`;
+  }
+
+  const themeToggle = document.getElementById("themeToggle");
+  if (themeToggle) {
+    // Initial icon update
+    updateThemeIcon();
+
+    themeToggle.addEventListener("click", () => {
+      const isDark = document.documentElement.classList.contains("dark");
+
+      if (isDark) {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+      } else {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      }
+
+      updateThemeIcon();
+    });
+  }
+
+  // Mobile menu functionality
+  const mobileBtn = document.getElementById("mobileBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (mobileBtn && mobileMenu) {
+    const mobileMenuContent = mobileMenu.querySelector(".mobile-menu");
+    const hamburger = mobileBtn.querySelector(".hamburger");
+
+    function openMobileMenu() {
+      mobileMenu?.classList.remove("hidden");
+      mobileMenu?.classList.add("flex");
+      hamburger?.classList.add("active");
+      mobileMenuContent?.classList.add("slide-in");
+      mobileMenuContent?.classList.remove("slide-out");
+      const backdrop = document.querySelector('.mobile-menu-backdrop');
+      if(backdrop) {
+        backdrop.classList.add('fade-in');
+        backdrop.classList.remove('fade-out');
+      }
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeMobileMenu() {
+      mobileMenuContent?.classList.add("slide-out");
+      mobileMenuContent?.classList.remove("slide-in");
+      hamburger?.classList.remove("active");
+      const backdrop = document.querySelector('.mobile-menu-backdrop');
+      if(backdrop) {
+        backdrop.classList.add('fade-out');
+        backdrop.classList.remove('fade-in');
+      }
+      document.body.style.overflow = "";
+
+      setTimeout(() => {
+        mobileMenu?.classList.remove("flex");
+        mobileMenu?.classList.add("hidden");
+      }, 400);
+    }
+
+    mobileBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (mobileMenu.classList.contains("hidden")) {
+        openMobileMenu();
+      } else {
+        closeMobileMenu();
+      }
+    });
+
+    mobileMenu.addEventListener("click", (e) => {
+      if (
+        (e.target as HTMLElement).classList.contains("mobile-menu-backdrop")
+      ) {
+        closeMobileMenu();
+      }
+    });
+
+    document.querySelectorAll(".mobile-nav-item").forEach((link) => {
+      link.addEventListener("click", () => closeMobileMenu());
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !mobileMenu.classList.contains("hidden")) {
+        closeMobileMenu();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768 && !mobileMenu.classList.contains("hidden")) {
+        closeMobileMenu();
+      }
+    });
+  }
+
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (this: HTMLAnchorElement, e) {
+      const targetId = this.getAttribute("href");
+      if (targetId && targetId !== "#") {
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          const headerOffset = 100;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition =
+            elementPosition + window.scrollY - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth",
+          });
+        }
+      }
+    });
+  });
+</script>
